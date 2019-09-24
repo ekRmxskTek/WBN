@@ -100,7 +100,7 @@ def main():
         if epoch%PRINT==0:
             loss_ = sess.run(total_MSE, feed_dict={x:X_valid, y:y_valid, LR:learning_rate, reg:alpha})
             print('Validation loss : {}'.format(loss_))
-            if loss_ < 0.001:
+            if loss_ < 0.005:
                 alpha = 1e-9
                 
         if alpha<alpha_init and loss_<loss_min:
