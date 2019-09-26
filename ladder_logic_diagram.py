@@ -20,7 +20,7 @@ def get_command_line_args():
     parser.add_argument("-l", "--learning_rate", type=float, default=1e-3,
                         help="learning rate for learning default 1e-3")
     parser.add_argument("-b", "--batch", type=int, default=64,
-                        help="size of bath default 64")
+                        help="size of batch default 64")
     parser.add_argument("-i", "--iteration", type=int, default=100000,
                         help="maximum iteration number default 100000")
     parser.add_argument("-p", "--patience", type=int, default=10,
