@@ -34,13 +34,6 @@ def get_command_line_args():
     return args
 
 def main():
-    import os
-    os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
-    os.environ["CUDA_VISIBLE_DEVICES"] = "0"
-
-    config = tf.ConfigProto()
-    config.gpu_options.per_process_gpu_memory_fraction = 0.3
-
     args = get_command_line_args()
     
     X_train_source, y_train_source, X_test_source, y_test_source = binary_mnist_classification(train_size=3200, classification_digits=args.source)
@@ -70,7 +63,7 @@ def main():
 
         init = tf.global_variables_initializer()
         
-    sess = tf.Session(graph=graph, config=config)
+    sess = tf.Session(graph=graph)
     sess.run(init)
     print('Graph Ready')
 
