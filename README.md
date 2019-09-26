@@ -22,7 +22,7 @@ Run ladder_logic_diagram.py. Options has default settings as follows:
 -th, --threshold : default 0.005 : threshold of error for changing regression parameter  
 -p, --patience : default 10 : early stopping patience  
   
-For lld1 and lld2 recommended layer number is 4, duplicate number is $\in${3,4}. For lld3 recommended layer number is 5, duplicate number is 5.  
+For lld1 and lld2 recommended layer number is 4, duplicate number is 3. For lld3 recommended layer number is 5, duplicate number is 4, learning_rate is 5e-4
 
                         
 ## binary MNIST task (end-to-end PathNet, tranfer)
