@@ -32,12 +32,6 @@ def get_command_line_args():
     return args
 
 def main():
-    os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
-    os.environ["CUDA_VISIBLE_DEVICES"] = "0"
-
-    config = tf.ConfigProto()
-    config.gpu_options.per_process_gpu_memory_fraction = 0.3
-    
     args = get_command_line_args()
 
     (X_train_c1, y_train_c1, X_test_c1, y_test_c1), (X_train_c2, y_train_c2, X_test_c2, y_test_c2) = cifar_classification()
@@ -75,12 +69,11 @@ def main():
 
         init = tf.global_variables_initializer()
 
-    sess = tf.Session(graph=graph, config=config)
+    sess = tf.Session(graph=graph)
     sess.run(init)
     print('Graph Ready')
     
     max_iter = args.iteration
-    learning_rate = 1e-5
 
 
     print('Training start!')
