@@ -1,5 +1,6 @@
 import numpy as np
 
+
 class Dataset:
     def __init__(self, inputs, outputs):
         self._index_in_epoch = 0
