@@ -3,6 +3,7 @@ from tensorflow.examples.tutorials.mnist import input_data
 from utils import *
 
 
+
 def ladder_logic_data_1(num_inputs=8, train_size=1000, test_size=500):
         X_train = np.random.randint(2, size=(train_size, num_inputs))
         y_train = Multiplication_logit(Addition_logit(Multiplication_logit(X_train[:,0], X_train[:,1]), X_train[:,2]), Addition_logit(X_train[:,3], X_train[:,5]))
