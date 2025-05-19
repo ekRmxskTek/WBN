@@ -8,6 +8,7 @@ from data_processing import *
 
 import os
 
+
 def get_command_line_args():
     parser = argparse.ArgumentParser(description="End-to-End PathNet for binary MNIST classification")
     parser.add_argument("-L", "--layer", type=int, default=3,
