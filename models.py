@@ -1,6 +1,7 @@
 import numpy as np
 import tensorflow as tf
 
+
 class WhiteBoxNet(object):
     def __init__(self, output_dim, layer_size, unitary_func_list, binary_func_list):
         self.output_dim = output_dim
