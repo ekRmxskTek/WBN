@@ -7,6 +7,7 @@ from utils import *
 from data_processing import *
 
 
+
 def get_command_line_args():
     parser = argparse.ArgumentParser(description="WhiteBoxNet for ladder logic diagrams")
     parser.add_argument("-layer", type=int, default=4,
