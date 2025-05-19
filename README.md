@@ -4,6 +4,7 @@ Official github code implementation of the paper "White Box Network : obtaining 
 ## Authors
 Anonymous submission
 
+
 ## Requirements
 This code is written in python 3, detailed requirements can be referred in requirements.txt. 
 ```
